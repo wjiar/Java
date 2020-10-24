@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript">
+        var a = 100;      //整数
+        var b = 3.14;      //小数
+        var c = true;      //布尔
+        var d = 'a';      //字符串
+        var e = "hello";  //字符串
+        var f;        //未初始化
+        var g = null;     //空
+
+        document.write("a的值是：" + a  + ", 类型是：" + typeof(a) + "<br/>");
+        document.write("b的值是：" + b  + ", 类型是：" + typeof(b) + "<br/>");
+        document.write("c的值是：" + c  + ", 类型是：" + typeof(c) + "<br/>");
+        document.write("d的值是：" + d  + ", 类型是：" + typeof(d) + "<br/>");
+        document.write("e的值是：" + e  + ", 类型是：" + typeof(e) + "<br/>");
+        document.write("f的值是：" + f  + ", 类型是：" + typeof(f) + "<br/>");
+        document.write("g的值是：" + g + ", 类型是：" + typeof(g) + "<br/>");
+
+        var m = parseInt("1234");
+        document.write(m + "<br/>");
+        var m = parseInt("1234abc");
+        document.write(m + "<br/>");
+        var m = parseInt("abc1234");   //NaN   Not a Number不是一个数
+        document.write(m + "<br/>");
+        var m = parseInt("0xA");    //0x开头表示是十六进制的数
+        document.write(m + "<br/>");
+        var m = parseInt("56.9");
+        document.write(m + "<br/>");
+
+        //分别对字符串abc、123、123abc、abc123使用这个函数，观察结果。
+        document.write(isNaN("abc") + "<br/>");
+        document.write(isNaN("123") + "<br/>");
+        document.write(isNaN("123abc") + "<br/>");
+        document.write(isNaN("abc123") + "<br/>");
+
+        document.write("数字与布尔类型相加：" + (true + 5) + "<br/>");   //true = 1
+        document.write("数字与布尔类型相加：" + (false + 5) + "<br/>");
+
+        var x = 5;
+        var y= 10;
+        var f = x++ < 2 && y++ < 10;
+        document.write("f=" + f + ", x=" + x + ", y=" + y+"<br/>");
+
+
+        //定义数组
+        var arr = [1,2,4,13,25,56];
+
+        //i，不是元素本身
+        for (var i in arr) {
+            document.write(typeof(i) + "->" + arr[i] + "&nbsp;&nbsp;");
+        };
+
+        document.write("<br/>")
+
+        function sayHi(name) {
+            alert("Hi, " + name);
+            //return "Hi," + name;
+        }
+        sayHi("aa");
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h3 id="h3">sdfs</h3>
+    <select onchange="showCity()">
+        <option>北京</option>
+        <option>汕头</option>
+        <option>汕尾</option>
+        <option>长沙</option>
+    </select>
+
+    <input type="button" value="前进" onclick="history.forward();" />
+    <input type="button" value="go前进" onclick="history.go(1);" />
+    <input type="button" value="后退" onclick="history.back();" />
+    <input type="button" value="go后退" onclick="history.go(-1);" />
+
+</body>
+</html>

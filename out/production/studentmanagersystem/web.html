@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        h1 {
+            color: red;
+            font-size: 50px;
+        }
+        form {
+            background-color: darkblue;
+        }
+        p:hover {
+           background-color: yellow;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>这是一个标题</title>
+</head>
+<body bgcolor="blue">
+    <p>HelloWorld</p>
+    <h1>中</h1>
+    <h2>中</h2>
+    <h3>中</h3>
+    <h4>中</h4>
+    <h5>中</h5>
+    <h6>中</h6>
+    <hr size="10" width="50%" align="left"  color="red"/>
+    <p>这是<span>fsfsdfsdf</span>段落一。</p>
+    <p>这是段落二。</p>
+    <p>这是段落三。</p>
+    <p title="段落说明">段落元素由 p 标签定义。</p>
+    <hr size="10" width="50%" align="left"  color="red"/>
+    <p>X<sub>1</sub>=1</p>
+    <p>2<sup>3</sup>=8</p>
+    中国<br>美国
+    <pre>
+        class Demo{
+			public static void main(String[] args){
+				System.out.println("hello,world");
+			}
+		}
+    </pre>
+    <ul type="circle">
+        <li>咖啡</li>
+        <li>茶</li>
+        <li>牛奶</li>
+    </ul>
+    <a href="index.html" target="_blank">首页</a><br>
+    <a href="http://www.baidu.com" target="_blank">百度</a><br>
+    <a href="tencent://message?uin=418146" target="_blank">发送邮件</a><br>
+    <h1 name="top">链接和导航</h1>
+    <h2><a name="one">第一部分</a></h2>
+    <h2><a name="two">第二部分</a></h2>
+    <h2><a name="three">第三部分</a></h2>
+    <p><a href="#top">回顶部</a></p>
+    <img src="11.jpg" alt="hahah" border="5" width="40" height="50" title="meinv">
+    <table border="2"  align="center" width="50%" cellspacing="0" cellpadding="10">
+        <caption>员工信息表</caption>
+        <tr>
+            <th colspan="2">姓名</th>
+<!--            <th>年龄</th>-->
+        </tr>
+        <tr>
+            <td align="center">zhangsan</td>
+            <td align="center">18</td>
+        </tr>
+    </table>
+    <fieldset>
+        <legend>注册新用户</legend>
+    <form action="192.168.0.1" method="get">
+        用户名:
+        <input type="text" name="username"/>
+        <br />
+        密码:
+        <input type="password" name="password"/>
+        <br/>
+        性别:
+        男
+        <input name="gender" value="male" type="radio"/>
+        女
+        <input name="gender" value="female" type="radio"/>
+        <br/>
+        爱好:
+        吃饭
+        <input type="checkbox" name="interst" value="eat"/>
+        睡觉
+        <input type="checkbox" name="interst" value="sleep"/>
+        看电影
+        <input type="checkbox" name="interst" value="movie"/>
+        <br>
+        城市:
+        <select name="city">
+            <option value="">请选择</option>
+            <option value="gz">广州</option>
+            <option value="bj">北京</option>
+            <option value="cd">成都</option>
+        </select>
+        <br/>
+        上传文件:
+        <input name="file" type="file" value="myfile">
+        </input>
+        <br/>
+        自我介绍:
+        <textarea name="introduce" rows="10" cols="20"></textarea>
+        <br />
+        <input type="submit"/>
+        <input type="reset" />
+        <br/>
+        <input type="image" src="submit.gif"/>
+    </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+    <span id="mydate">11</span>
+    省份
+    <select id="province" onchange="showCity()">
+        <option>省份</option>
+        <option>广东</option>
+        <option>湖南</option>
+        <option>广西</option>
+    </select>
+    城市
+    <select id="city">
+        <option>城市</option>
+    </select>
+</body>
+<script type="text/javascript">
+    document.write(location.href+"<br/>")
+    document.write(document.documentURI+"<br/>")
+
+    function showDate() {
+        //获取系统时间
+        var date = new Date();
+        //获取年 月 日时分秒
+        var str = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日" + "星期" + date.getDay() +
+            " " + date.getHours() + "时" + date.getMinutes() + "分" + date.getMinutes() + "分" + date.getSeconds() + "秒"
+        //将格式化好的时间显示在叶面的span标签体中
+        var span = document.getElementById("mydate");
+        //给span标签设置标签体内容
+        span.innerHTML = str.fontcolor("red");
+        //调用定时函数
+        window.setTimeout("showDate()", 1000);
+    }
+    //调用函数
+    showDate();
+
+    function showCity() {
+        var arr= new Array(3);
+        //文字下标
+        arr["广东"]= ["广州","深圳","东莞","湛江"];
+        arr["湖南"]= ["长沙","株洲","湘潭","岳阳"];
+        arr["广西"] =["南宁","桂林","贵港","柳州"];
+        //得到省和城市的下拉列表
+        var province = document.getElementById("province");
+        var city = document.getElementById("city");
+        //选中哪一项
+        var v = province.value;
+        //得到相应的城市数组
+        var cities = arr[v];
+        //添加之前要清空原有的option
+        city.options.length = 1;
+        //添加option，在JS中options和Option本身就是2个对象
+        for(var i=0; i<cities.length; i++) {
+            //new Option(文本,值)
+            city.options.add(new Option());
+        }
+    }
+
+</script>
+</html>
